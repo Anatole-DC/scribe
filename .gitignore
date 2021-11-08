@@ -1,0 +1,8 @@
+# Project folders
+
+.vscode
+.venv
+
+# Python files
+
+__init__.py
