@@ -1,4 +1,4 @@
-<h1 text="center">SCRIBE</h1>
+<h1 align="center">SCRIBE</h1>
 
 Welcome to the scribe project !
 
