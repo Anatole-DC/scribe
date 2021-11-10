@@ -2,7 +2,4 @@
 
 .vscode
 .venv
-
-# Python files
-
-__init__.py
+__pycache__
