@@ -3,9 +3,15 @@ import src.config.settings as settings
 import src.utils.debug as debug
 
 def is_markdown(path: str) -> bool:
+    """
+        Check if a file has the markdown extension.
+    """
     return path.lower().endswith((".md", ".markdown"))
 
 def is_valid_path(path: str) -> bool:
+    """
+        Check if a path is valid.
+    """
     return os.path.exists(path)
 
 def validate_scribe_architecture() -> bool:
@@ -22,6 +28,7 @@ def validate_scribe_architecture() -> bool:
     if not is_valid_path(main) or not is_valid_path(doc):
         return False
 
+    # Check if tha main file is a markdown
     if not is_markdown(main):
         debug.error(f"{main} is not a markdown")
         return False
