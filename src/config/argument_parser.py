@@ -11,10 +11,10 @@ def is_variable_parameter(arg: str, split_symbol: str="=") -> bool:
 
 def init_variable_parameter(arg: str, split_symbol: str="=") -> bool:
     argument, value = arg.split(split_symbol)
-
     if argument == "--detail":
         settings.SUMMARY_DETAILS = value
-    
+    elif argument == "--main":
+        settings.MAIN_NAME = value
     else:
         debug.error(f"Unknown variable parameter {argument}")
         return False
@@ -75,6 +75,8 @@ def init_settings() -> bool:
                 init_parameter(arg)
 
             index += 1
+
+        debug.log(f"MAIN:{settings.MAIN_NAME}")
 
         return True
     except:

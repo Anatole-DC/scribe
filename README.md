@@ -6,7 +6,7 @@ Scribe is an automation tools that generates markdown documentation architecture
 
 ___
 
-**Version :** 1.0.0
+**Version :** 1.7.0
 
 **Technos :** Python 3, Markdown
 
