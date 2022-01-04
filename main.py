@@ -4,6 +4,7 @@ import src.utils.debug as debug
 import os
 import src.code.scribe_architecture as scribe_arch
 import src.code.scribe_builder as scribe_build
+import json
 
 def main():
     print("Hello World")
@@ -20,7 +21,7 @@ def main():
         debug.error("The directory architecture is not valid, exiting now...")
         exit(0)
 
-    debug.debug(f"{scribe_build.fetch_subdirectories()}")
+    debug.debug(f"{json.dumps(obj=scribe_build.fetch_subdirectories(), indent=4)}")
 
 if __name__ == "__main__":
     main()
